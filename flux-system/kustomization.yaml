@@ -1,0 +1,4 @@
+resources:
+  - mongodb-namespace.yaml
+  - mongodb-operator.yaml
+  - mongodb-replicaset.yaml

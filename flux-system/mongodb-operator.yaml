@@ -1,0 +1,14 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: mongodb-operator
+  namespace: flux-system
+spec:
+  interval: 1m
+  path: ./mongodb/operator
+  prune: true
+  dependsOn:
+    - name: mongodb-namespace
+  sourceRef:
+    kind: GitRepository
+    name: test-repo
